@@ -1,0 +1,707 @@
+.app-shell {
+    @apply min-h-screen overflow-x-hidden bg-pearl bg-grain text-ink;
+  }
+
+  .site-header {
+    @apply sticky top-0 z-40 border-b border-ink/10 bg-pearl/90 backdrop-blur-xl;
+  }
+
+  .announcement {
+    @apply bg-night px-4 py-2 text-center text-xs font-bold uppercase tracking-[0.24em] text-pearl;
+  }
+
+  .nav-bar {
+    @apply mx-auto flex h-20 max-w-7xl items-center justify-between px-5 md:px-8;
+  }
+
+  .brand {
+    @apply inline-flex flex-col font-display leading-none tracking-normal text-ink;
+  }
+
+  .brand span {
+    @apply text-lg italic text-clove;
+  }
+
+  .brand strong {
+    @apply text-3xl font-semibold;
+  }
+
+  .desktop-nav {
+    @apply relative hidden items-center gap-2 lg:flex;
+  }
+
+  .nav-link {
+    @apply inline-flex items-center gap-1 px-4 py-3 text-sm font-bold uppercase tracking-[0.18em] text-ink/70 transition hover:text-ink;
+  }
+
+  .nav-link.active {
+    @apply text-clove;
+  }
+
+  .nav-actions {
+    @apply flex items-center gap-2;
+  }
+
+  .icon-button {
+    @apply inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/10 bg-white/60 text-ink transition hover:-translate-y-0.5 hover:border-clove/30 hover:bg-white;
+  }
+
+  .mobile-only {
+    @apply lg:hidden;
+  }
+
+  .cart-trigger {
+    @apply relative;
+  }
+
+  .cart-trigger span {
+    @apply absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-clove px-1 text-xs font-bold text-white;
+  }
+
+  .mega-menu {
+    @apply invisible absolute left-1/2 top-full mt-3 grid w-[min(1040px,calc(100vw-48px))] -translate-x-1/2 grid-cols-5 gap-7 rounded-[2rem] border border-ink/10 bg-pearl p-7 opacity-0 shadow-perfume;
+  }
+
+  .mega-menu h4 {
+    @apply mb-3 text-sm font-extrabold uppercase tracking-[0.18em] text-ink;
+  }
+
+  .mega-menu a {
+    @apply block py-1.5 text-sm text-smoke transition hover:text-clove;
+  }
+
+  .mega-feature {
+    @apply rounded-[1.5rem] bg-night p-6 text-pearl;
+  }
+
+  .mega-feature h3 {
+    @apply my-5 font-display text-3xl leading-tight text-pearl;
+  }
+
+  .mega-feature .text-link {
+    @apply text-pearl;
+  }
+
+  .mobile-drawer,
+  .search-overlay,
+  .cart-layer.visible {
+    @apply fixed inset-0 z-50;
+  }
+
+  .mobile-drawer,
+  .search-overlay {
+    @apply bg-ink/30 backdrop-blur-sm;
+  }
+
+  .drawer-panel {
+    @apply h-full w-[min(420px,88vw)] overflow-y-auto bg-pearl p-6 shadow-perfume;
+  }
+
+  .close {
+    @apply float-right;
+  }
+
+  .drawer-brand {
+    @apply mb-8 mt-10;
+  }
+
+  .drawer-panel details {
+    @apply border-b border-ink/10 py-4;
+  }
+
+  .drawer-panel summary {
+    @apply cursor-pointer text-sm font-extrabold uppercase tracking-[0.18em];
+  }
+
+  .drawer-panel details a {
+    @apply mt-3 block text-sm text-smoke;
+  }
+
+  .drawer-cta {
+    @apply mt-8 inline-flex w-full justify-center rounded-full bg-night px-5 py-4 text-sm font-bold uppercase tracking-[0.16em] text-pearl;
+  }
+
+  .search-box {
+    @apply mx-auto mt-24 w-[min(760px,92vw)] rounded-[2rem] border border-white/50 bg-pearl p-6 shadow-perfume md:p-9;
+  }
+
+  .search-box input,
+  .promo-input,
+  .checkout-form input,
+  .auth-card input,
+  .site-footer input,
+  .filters select {
+    @apply w-full rounded-full border border-ink/10 bg-white/75 px-5 py-4 text-sm outline-none transition focus:border-clove;
+  }
+
+  .search-results {
+    @apply mt-5 grid gap-3;
+  }
+
+  .search-results a,
+  .cart-item,
+  .order-line,
+  .mini-products button,
+  .faq-list div {
+    @apply flex items-center gap-4 rounded-2xl border border-ink/10 bg-white/50 p-3;
+  }
+
+  .search-results img,
+  .cart-item img,
+  .mini-products img {
+    @apply h-16 w-16 rounded-xl object-cover;
+  }
+
+  .search-results span,
+  .cart-item strong {
+    @apply flex-1 font-bold;
+  }
+
+  .search-results small,
+  .cart-item span {
+    @apply text-sm text-smoke;
+  }
+
+  .hero-section {
+    @apply relative mx-auto grid min-h-[calc(100vh-112px)] max-w-7xl items-center gap-10 px-5 py-14 md:grid-cols-[1.08fr_.92fr] md:px-8 md:py-20;
+  }
+
+  .hero-copy {
+    @apply max-w-3xl;
+  }
+
+  .hero-copy h1 {
+    @apply max-w-4xl;
+  }
+
+  .hero-copy p:not(.eyebrow) {
+    @apply mt-6 max-w-2xl text-lg leading-8 text-smoke;
+  }
+
+  .eyebrow {
+    @apply mb-4 text-xs font-extrabold uppercase tracking-[0.28em] text-clove;
+  }
+
+  .hero-actions,
+  .purchase-row {
+    @apply mt-8 flex flex-wrap items-center gap-3;
+  }
+
+  .primary-button,
+  .secondary-button,
+  .product-bottom button,
+  .chip-list button,
+  .size-picker button {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-extrabold uppercase tracking-[0.16em] transition;
+  }
+
+  .primary-button {
+    @apply bg-ink text-pearl shadow-soft hover:-translate-y-0.5 hover:bg-clove disabled:cursor-not-allowed disabled:opacity-40;
+  }
+
+  .secondary-button {
+    @apply border border-ink/20 bg-white/60 text-ink hover:border-clove/40 hover:bg-white;
+  }
+
+  .secondary-button.square {
+    @apply h-12 w-12 px-0;
+  }
+
+  .secondary-button.active,
+  .wish-button.active {
+    @apply border-clove bg-clove text-white;
+  }
+
+  .full {
+    @apply w-full;
+  }
+
+  .text-link {
+    @apply inline-flex items-center gap-2 text-sm font-extrabold uppercase tracking-[0.16em] text-clove;
+  }
+
+  .hero-card {
+    @apply relative ml-auto w-full max-w-[520px] overflow-hidden rounded-[2.5rem] bg-silk shadow-perfume;
+  }
+
+  .hero-card img {
+    @apply h-[560px] w-full object-cover transition duration-700 hover:scale-105;
+  }
+
+  .hero-card div {
+    @apply absolute bottom-5 left-5 right-5 rounded-[1.5rem] bg-pearl/90 p-5 backdrop-blur-md;
+  }
+
+  .hero-card span,
+  .hero-card small,
+  .product-info p,
+  .product-info span {
+    @apply text-xs font-bold uppercase tracking-[0.16em] text-smoke;
+  }
+
+  .hero-card strong {
+    @apply mt-1 block font-display text-3xl;
+  }
+
+  .hero-stats {
+    @apply col-span-full grid gap-3 sm:grid-cols-3;
+  }
+
+  .stat {
+    @apply rounded-3xl border border-ink/10 bg-white/50 p-5;
+  }
+
+  .stat strong {
+    @apply block font-display text-4xl;
+  }
+
+  .stat span {
+    @apply text-sm text-smoke;
+  }
+
+  .section,
+  .shop-layout,
+  .utility-page,
+  .journal-grid {
+    @apply mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24;
+  }
+
+  .section-heading {
+    @apply mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end;
+  }
+
+  .section-heading h2 {
+    @apply max-w-2xl;
+  }
+
+  .product-grid {
+    @apply grid gap-5 sm:grid-cols-2 lg:grid-cols-4;
+  }
+
+  .product-card {
+    @apply rounded-[1.75rem] border border-ink/10 bg-white/50 p-3 shadow-soft transition hover:-translate-y-1 hover:bg-white;
+  }
+
+  .product-image {
+    @apply relative block overflow-hidden rounded-[1.35rem] bg-silk;
+  }
+
+  .product-image img {
+    @apply h-80 w-full object-cover transition duration-700 hover:scale-105;
+  }
+
+  .badge {
+    @apply absolute left-3 top-3 z-10 rounded-full bg-pearl px-3 py-1 text-xs font-extrabold uppercase tracking-[0.16em] text-clove;
+  }
+
+  .product-info {
+    @apply flex items-start justify-between gap-3 px-1 pb-3 pt-4;
+  }
+
+  .product-info h3 {
+    @apply mt-1 font-display text-2xl leading-tight;
+  }
+
+  .wish-button {
+    @apply grid h-10 w-10 shrink-0 place-items-center rounded-full border border-ink/10 bg-white transition hover:border-clove;
+  }
+
+  .product-bottom {
+    @apply flex items-center justify-between border-t border-ink/10 px-1 pt-3;
+  }
+
+  .product-bottom strong {
+    @apply text-sm;
+  }
+
+  .product-bottom button {
+    @apply bg-night px-5 py-2 text-pearl hover:bg-clove;
+  }
+
+  .scent-finder {
+    @apply mx-auto grid max-w-7xl gap-4 px-5 py-10 md:grid-cols-[1.2fr_repeat(4,1fr)] md:px-8;
+  }
+
+  .scent-finder > div,
+  .scent-finder a {
+    @apply rounded-[1.5rem] border border-ink/10 bg-silk p-5;
+  }
+
+  .scent-finder a {
+    @apply flex min-h-32 items-end justify-between font-display text-2xl transition hover:-translate-y-1 hover:bg-white;
+  }
+
+  .editorial-band {
+    @apply mx-auto grid max-w-7xl overflow-hidden rounded-[2.25rem] bg-night text-pearl md:grid-cols-2;
+  }
+
+  .editorial-band img {
+    @apply h-full min-h-[420px] w-full object-cover;
+  }
+
+  .editorial-band div {
+    @apply flex flex-col justify-center p-8 md:p-14;
+  }
+
+  .editorial-band h2 {
+    @apply text-pearl;
+  }
+
+  .editorial-band p:not(.eyebrow) {
+    @apply my-6 leading-8 text-pearl/70;
+  }
+
+  .editorial-band .primary-button {
+    @apply w-fit bg-pearl text-ink;
+  }
+
+  .page-hero {
+    @apply mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28;
+  }
+
+  .page-hero.compact {
+    @apply pb-8;
+  }
+
+  .page-hero p:not(.eyebrow) {
+    @apply mt-6 max-w-3xl text-lg leading-8 text-smoke;
+  }
+
+  .shop-layout {
+    @apply grid gap-8 lg:grid-cols-[300px_1fr];
+  }
+
+  .filters {
+    @apply h-fit rounded-[1.75rem] border border-ink/10 bg-white/50 p-5 lg:sticky lg:top-28;
+  }
+
+  .filter-title {
+    @apply mb-5 flex items-center gap-2;
+  }
+
+  .filters label {
+    @apply mb-6 block text-sm font-extrabold uppercase tracking-[0.16em] text-ink;
+  }
+
+  .filters input[type='range'] {
+    @apply mt-4 w-full accent-clove;
+  }
+
+  .filters select {
+    @apply mt-3 normal-case tracking-normal;
+  }
+
+  .chip-list {
+    @apply mt-3 flex flex-wrap gap-2;
+  }
+
+  .chip-list button,
+  .size-picker button {
+    @apply border border-ink/10 bg-white/70 px-4 py-2 text-xs;
+  }
+
+  .chip-list button.active,
+  .size-picker button.active {
+    @apply bg-clove text-white;
+  }
+
+  .listing-bar {
+    @apply mb-5 flex flex-wrap justify-between gap-3 rounded-full border border-ink/10 bg-white/50 px-5 py-3 text-sm text-smoke;
+  }
+
+  .detail-page {
+    @apply mx-auto max-w-7xl px-5 py-10 md:px-8 md:py-16;
+  }
+
+  .detail-grid {
+    @apply grid gap-10 lg:grid-cols-[.92fr_1fr];
+  }
+
+  .detail-gallery {
+    @apply sticky top-28 h-fit;
+  }
+
+  .detail-gallery img {
+    @apply h-[620px] w-full rounded-[2.25rem] object-cover shadow-perfume;
+  }
+
+  .gallery-thumbs {
+    @apply mt-4 grid grid-cols-3 gap-3;
+  }
+
+  .gallery-thumbs span {
+    @apply h-3 rounded-full bg-clove/30;
+  }
+
+  .detail-copy {
+    @apply rounded-[2rem] border border-ink/10 bg-white/50 p-6 md:p-10;
+  }
+
+  .detail-copy h1 {
+    @apply mb-4;
+  }
+
+  .detail-copy > p:not(.eyebrow) {
+    @apply mt-5 text-lg leading-8 text-smoke;
+  }
+
+  .rating {
+    @apply inline-flex items-center gap-2 rounded-full bg-silk px-4 py-2 text-sm font-bold text-clove;
+  }
+
+  .accords {
+    @apply my-7 flex flex-wrap gap-2;
+  }
+
+  .accords span {
+    @apply rounded-full border border-clove/20 bg-clove/5 px-4 py-2 text-sm font-bold text-clove;
+  }
+
+  .size-picker strong {
+    @apply mb-3 block;
+  }
+
+  .size-picker div,
+  .quantity-row {
+    @apply flex items-center gap-2;
+  }
+
+  .quantity-row {
+    @apply mt-6;
+  }
+
+  .quantity-row button {
+    @apply grid h-10 w-10 place-items-center rounded-full border border-ink/10 bg-white;
+  }
+
+  .quantity-row span {
+    @apply min-w-10 text-center font-bold;
+  }
+
+  .quantity-row.small {
+    @apply mt-3;
+  }
+
+  .quantity-row.small button {
+    @apply h-8 w-8;
+  }
+
+  .notes-pyramid {
+    @apply mt-8 grid gap-3;
+  }
+
+  .notes-pyramid div {
+    @apply rounded-2xl border border-ink/10 bg-silk p-4;
+  }
+
+  .notes-pyramid strong {
+    @apply mr-3 capitalize text-clove;
+  }
+
+  .notes-pyramid span {
+    @apply text-smoke;
+  }
+
+  .cart-layer {
+    @apply pointer-events-none fixed inset-0 z-50;
+  }
+
+  .cart-layer.visible {
+    @apply pointer-events-auto;
+  }
+
+  .cart-scrim {
+    @apply absolute inset-0 bg-ink/30;
+  }
+
+  .cart-drawer {
+    @apply absolute right-0 top-0 flex h-full w-[min(470px,92vw)] translate-x-[105%] flex-col overflow-y-auto bg-pearl p-6 shadow-perfume;
+  }
+
+  .drawer-head {
+    @apply mb-6 flex items-start justify-between gap-4;
+  }
+
+  .cart-items {
+    @apply grid gap-3;
+  }
+
+  .empty-state {
+    @apply rounded-[1.5rem] border border-dashed border-ink/20 bg-white/40 p-8 text-center text-smoke;
+  }
+
+  .cart-item div {
+    @apply min-w-0 flex-1;
+  }
+
+  .summary-box {
+    @apply my-5 grid gap-3 rounded-[1.5rem] border border-ink/10 bg-silk p-5;
+  }
+
+  .summary-box div {
+    @apply flex items-center justify-between gap-4 text-sm;
+  }
+
+  .summary-box span {
+    @apply text-smoke;
+  }
+
+  .utility-grid,
+  .checkout-grid,
+  .account-grid {
+    @apply grid gap-8 lg:grid-cols-[1fr_420px];
+  }
+
+  .checkout-grid {
+    @apply lg:grid-cols-[1fr_460px];
+  }
+
+  .checkout-form,
+  .auth-card,
+  .orders-card {
+    @apply rounded-[2rem] border border-ink/10 bg-white/50 p-6 shadow-soft md:p-8;
+  }
+
+  .checkout-form fieldset {
+    @apply mb-7 grid gap-3 border-0 p-0;
+  }
+
+  .checkout-form legend {
+    @apply mb-3 font-display text-3xl;
+  }
+
+  .two-col {
+    @apply grid gap-3 md:grid-cols-2;
+  }
+
+  .radio-card {
+    @apply flex items-center gap-3 rounded-2xl border border-ink/10 bg-silk p-4 text-sm font-bold;
+  }
+
+  .confirmation {
+    @apply grid min-h-[70vh] place-items-center text-center;
+  }
+
+  .auth-card h2,
+  .orders-card h2 {
+    @apply mb-5;
+  }
+
+  .auth-card {
+    @apply grid gap-3;
+  }
+
+  .mini-products {
+    @apply grid gap-3;
+  }
+
+  .mini-products button {
+    @apply w-full text-left;
+  }
+
+  .order-line {
+    @apply mb-8;
+  }
+
+  .order-line span {
+    @apply flex-1;
+  }
+
+  .values-grid {
+    @apply grid gap-5 md:grid-cols-3;
+  }
+
+  .values-grid div {
+    @apply rounded-[1.75rem] border border-ink/10 bg-white/50 p-6;
+  }
+
+  .values-grid svg {
+    @apply mb-5 text-clove;
+  }
+
+  .values-grid p {
+    @apply mt-3 leading-7 text-smoke;
+  }
+
+  .journal-grid {
+    @apply grid gap-5 md:grid-cols-3;
+  }
+
+  .journal-grid article {
+    @apply rounded-[1.75rem] border border-ink/10 bg-white/50 p-3 shadow-soft;
+  }
+
+  .journal-grid img {
+    @apply mb-5 h-80 w-full rounded-[1.35rem] object-cover;
+  }
+
+  .journal-grid h2 {
+    @apply mb-5 text-3xl;
+  }
+
+  .faq-list {
+    @apply grid gap-3;
+  }
+
+  .faq-list div {
+    @apply text-smoke;
+  }
+
+  .faq-list svg {
+    @apply text-clove;
+  }
+
+  .site-footer {
+    @apply mt-16 grid gap-8 border-t border-ink/10 bg-silk px-5 py-10 md:grid-cols-[1.2fr_.8fr_1fr] md:px-8 lg:px-[max(2rem,calc((100vw-1280px)/2+2rem))];
+  }
+
+  .site-footer p {
+    @apply mt-4 max-w-sm text-sm text-smoke;
+  }
+
+  .site-footer > div:nth-child(2) {
+    @apply grid content-start gap-3 text-sm font-bold uppercase tracking-[0.16em] text-smoke;
+  }
+
+  .site-footer label {
+    @apply mb-3 block text-sm font-extrabold uppercase tracking-[0.16em];
+  }
+
+  .site-footer form div {
+    @apply flex gap-2;
+  }
+
+  .site-footer button {
+    @apply rounded-full bg-night px-5 text-sm font-bold text-pearl;
+  }
+
+@media (max-width: 767px) {
+    .announcement {
+      @apply text-[10px] leading-5;
+    }
+
+    .brand strong {
+      @apply text-2xl;
+    }
+
+    .hero-section {
+      @apply min-h-0;
+    }
+
+    .hero-card img,
+    .detail-gallery img {
+      @apply h-[420px];
+    }
+
+    .section-heading {
+      @apply items-start;
+    }
+
+    .scent-finder {
+      @apply grid-cols-1;
+    }
+
+    .detail-gallery {
+      @apply static;
+    }
+}
